@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
     <h1>Edit Post</h1>
-    <form actiom="{% url 'blog_update' object.pk %}" method="post">
+    <form action="{% url 'product_update' object.pk %}" method="post">
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit" value="Update">

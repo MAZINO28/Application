@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+<a href = "{% url 'product_create' %}">+ New Blog Post</a>
+    {% for product in product %}
+        <div class="post-entry">
+            <h2><a href="{% url 'product_detail' product.pk %}" }>{{product.title}}</a></h2>
+        </div>
+    {% endfor %}
+{% endblock content %}

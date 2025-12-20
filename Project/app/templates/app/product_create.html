@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
     <h1>New Post</h1>
-    <form actiom="{% url 'blog_create' }" method="post">
+    <form action="{% url 'product_create' %}" method="post">
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit" value="Save">
